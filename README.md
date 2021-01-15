@@ -24,5 +24,9 @@ incl. progress in percent
 ### Limitations: 
 
 ### Lessons Learned: 
+<ul>
+  <li>Player movement horizontal </li>
+  <li>Timer (functionality & display) </li>
+ </ul>
 
 Copyright by Pia Lacher 
