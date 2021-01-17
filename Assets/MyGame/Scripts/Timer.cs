@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timeInSec = 60f;
+        timeInSec = 120f;
     }
 
   
