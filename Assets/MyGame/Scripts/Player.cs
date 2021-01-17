@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 
     int countCollisions = 0;
+    public PlayerController playerSpeed;
+    private float playerSpeedBeforeHit;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +30,12 @@ public class Player : MonoBehaviour
         }*/
 
         if (collision.name == "Brick")
-        {
+        {   
             Debug.Log("in if in Brick freeze");
+            Debug.Log(playerSpeed.speed);
+            playerSpeedBeforeHit = playerSpeed.speed;
+            playerSpeed.speed = 0;
+            StartCoroutine(SetSpeedToZero());
         }
         else if(collision.name == "Present")
         {
@@ -40,4 +46,11 @@ public class Player : MonoBehaviour
         Debug.Log("In Player, Collide with" + collision);
         Debug.Log("Count Collisions" + countCollisions);
     }
+
+    public  IEnumerator SetSpeedToZero() 
+    {
+        yield return new WaitForSeconds(3f);
+        playerSpeed.speed = playerSpeedBeforeHit;
+    }
+
 }
