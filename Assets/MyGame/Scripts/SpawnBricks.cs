@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnBricks : MonoBehaviour
 {
@@ -10,13 +8,11 @@ public class SpawnBricks : MonoBehaviour
     public float spawnRate = 3f;
     public float nextSpawn = 4f;
 
-    // Start is called before the first frame update
     void Start()
     {
         SpawnThePresents();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time > nextSpawn)
@@ -24,9 +20,7 @@ public class SpawnBricks : MonoBehaviour
             nextSpawn = Time.time + spawnRate;
             SpawnThePresents();
         }
-
     }
-
     private void SpawnThePresents()
     {
         var clones = Instantiate(brickPrefab);
@@ -34,6 +28,5 @@ public class SpawnBricks : MonoBehaviour
         clones.GetComponent<Transform>().localPosition = new Vector3(Random.Range(-400, 400), 0, 0);
         clones.GetComponent<Transform>().localRotation = Quaternion.identity;
         clones.GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0.5f);
-
     }
 }
