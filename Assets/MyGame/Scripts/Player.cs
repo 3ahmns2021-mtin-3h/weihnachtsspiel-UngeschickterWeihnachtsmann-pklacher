@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour
     int countCollisions = 0;
     public PlayerController playerSpeed;
     private float playerSpeedBeforeHit;
+    public int points = 0;
+    public TextMeshProUGUI scoreDisplay;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +27,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*if (collision.name == "Brick")
-        {
-            Debug.Log("In if In Brick -1");
-            countCollisions--;
-        }*/
+     
 
         if (collision.name == "Brick")
         {   
@@ -37,10 +37,12 @@ public class Player : MonoBehaviour
             playerSpeed.speed = 0;
             StartCoroutine(SetSpeedToZero());
         }
-        else if(collision.name == "Present")
+        else if(collision.name.Contains("Present"))
         {
-            Debug.Log("in if in Present +1");
-            countCollisions++;
+            Destroy(collision.gameObject);
+            Debug.Log("HIT PRESENT -------");
+            points++;
+            scoreDisplay.text = points.ToString();
         }
 
         Debug.Log("In Player, Collide with" + collision);
