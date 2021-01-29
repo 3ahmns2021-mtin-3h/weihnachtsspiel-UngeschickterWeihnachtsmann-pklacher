@@ -29,10 +29,9 @@ public class Player : MonoBehaviour
     {
      
 
-        if (collision.name == "Brick")
+        if (collision.name.Contains("Brick"))
         {   
             Debug.Log("in if in Brick freeze");
-            Debug.Log(playerSpeed.speed);
             playerSpeedBeforeHit = playerSpeed.speed;
             playerSpeed.speed = 0;
             StartCoroutine(SetSpeedToZero());
@@ -51,7 +50,7 @@ public class Player : MonoBehaviour
 
     public  IEnumerator SetSpeedToZero() 
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         playerSpeed.speed = playerSpeedBeforeHit;
     }
 

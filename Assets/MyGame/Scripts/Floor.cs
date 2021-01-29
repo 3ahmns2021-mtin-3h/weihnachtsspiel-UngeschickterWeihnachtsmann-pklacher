@@ -22,7 +22,7 @@ public class Floor : MonoBehaviour
         {
             Destroy(Collision.gameObject);
         }
-        if (Collision.name == "Brick")
+        if (Collision.name.Contains("Brick"))
         {
             Destroy(Collision.gameObject);
         }
