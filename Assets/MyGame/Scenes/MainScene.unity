@@ -886,8 +886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brickPrefab: {fileID: 1837417995}
   parentSpawnBrickGo: {fileID: 1112593110}
-  spawnRate: 1
-  nextSpawn: 5
+  spawnRate: 3
+  nextSpawn: 4
 --- !u!4 &1155769877
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presentPrefab: {fileID: 7195684278397469520, guid: e44372b9dd50cd549a2703d7dda7591a, type: 3}
   parentSpawnGo: {fileID: 935586005}
-  spawnRate: 1
-  nextSpawn: 5
+  spawnRate: 3
+  nextSpawn: 4
 --- !u!1 &1837417995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5294726440373490818, guid: 52178474e1a4def46aecedcebab1d908, type: 3}
