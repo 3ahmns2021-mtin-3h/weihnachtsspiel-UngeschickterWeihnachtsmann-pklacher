@@ -7,19 +7,13 @@ Short Christmasgame to improve skills in Unity and C#. Collect "presents" and av
 Windows 10, Unity Version 2020.1.5f1, Visual Studio 2019
 
 ### Target platform: 
-WebGL
-
-### Visuals: 
-
-
-### Necessary setup/execution steps: 
-
+WebGL Ref.Res. (960x600)
 
 ### Third party material: 
 
 
 ### Project state: 
-MVP
+MVP: done
 
 ### Limitations: 
 
