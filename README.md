@@ -19,7 +19,13 @@ WebGL Ref.Res. (960x600)
 
 
 ### Project state: 
-MVP: done
+MVP: 
+<ul>
+  <li>Rigidbody2D für die fallenden Teile</li>
+  <li>Steuerung von Weihnachtsmann (links- rechts Tasten)</li>
+  <li>Collider & Trigger für Player/Collectibles Interaktionen</li>
+  <li>Randomizer für Collectibles/Enemies</li>
+</ul>
 
 ### Limitations: 
 
