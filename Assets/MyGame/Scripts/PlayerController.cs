@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveHorizontal = Input.GetAxis("Horizontal") * speed;
-        moveHorizontal = moveHorizontal * Time.deltaTime;
+     
+            moveHorizontal = Input.GetAxis("Horizontal") * speed;
+            moveHorizontal = moveHorizontal * Time.deltaTime;
 
-        player.GetComponent<Transform>().position = player.GetComponent<Transform>().position + new Vector3(moveHorizontal, 0, 0);
+            player.GetComponent<Transform>().position = player.GetComponent<Transform>().position + new Vector3(moveHorizontal, 0, 0);
+      
+       
     }
 }
