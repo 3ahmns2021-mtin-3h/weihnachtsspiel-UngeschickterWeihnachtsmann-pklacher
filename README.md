@@ -9,6 +9,10 @@ Windows 10, Unity Version 2020.1.5f1, Visual Studio 2019
 ### Target platform: 
 WebGL Ref.Res. (960x600)
 
+### WebGL:
+
+http://localhost:61648/
+
 ### Visuals:
 <div>
 <img src="./Screenshots/WeihnachtsmannSpielKonzept.JPG" width="270">
